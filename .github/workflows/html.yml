@@ -15,5 +15,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           scripts: |
             cd /home/ubuntu/HTML5-Tetris
-            sudo git pull origin master
-            ech0 "Done"
+            sudo git push origin master
+            echo "Done"
