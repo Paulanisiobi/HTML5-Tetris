@@ -16,5 +16,5 @@ jobs:
           script: |
             sudo su
             cd /home/ubuntu/HTML5-Tetris
-            sudo git push origin master
+            pwd
             echo "Done"
