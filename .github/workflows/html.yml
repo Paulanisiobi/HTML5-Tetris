@@ -5,15 +5,15 @@ on:
             - master
 jobs:
     build:
-        - name: deploy tetris-game1
+        name: deploy tetris-game1
         runs-on: ubuntu-latest
         steps:
         - name: publish files
           uses: appleboy/ssh-action@v0.1.10
           with:
-                host: 3.89.143.152
-                username: ubuntu
-                key: -----BEGIN RSA PRIVATE KEY-----
+            host: 3.89.143.152
+            username: ubuntu
+            key: -----BEGIN RSA PRIVATE KEY-----
                     MIIEpAIBAAKCAQEAm6bTpTwDyyj74wKjk8VYSqta8xb9fmUn8M/LrhjWtD29P17M
                     ehULkjUs4+b064+BzPFOIovESl8zV6HF22csfSVYL3juiepRNDHwUlYkbvIIRD8g
                     SmNm03uFPrQf+GRSvj/VQkDy5/qITp6XZEhGdZBy1LqQGdSfLR3KXayd+qQ9xGnw
@@ -40,5 +40,5 @@ jobs:
                     Ieu8Y2Coo0J/KIQyCzcGhUtmSlL/ielgMZlUj3/ujapSKV4GLt8071AFFhvfGgVs
                     hAq777Fe9Z5QVaJixEr2g+aVRdg5AIGu0LQiwNk3JGec6BIpsUtlhA==
                     -----END RSA PRIVATE KEY-----
-                script: |
-                    pwd          
+            script: |
+                pwd          
