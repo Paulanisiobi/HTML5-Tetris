@@ -1,18 +1,44 @@
-name:
+name: Deploying Static App
 on:
     push:
         branches:
             - master
 jobs:
-    buld:
-        name: deploy tetris-game1
+    build:
+        - name: deploy tetris-game1
         runs-on: ubuntu-latest
         steps:
         - name: publish files
           uses: appleboy/ssh-action@v0.1.10
           with:
-                host: ${{secrets.HOST}}
-                username: ${{secrets.USERNAME}}
-                key: ${{secrets.PRIVATE_KEY}}
+                host: 3.89.143.152
+                username: ubuntu
+                key: -----BEGIN RSA PRIVATE KEY-----
+                    MIIEpAIBAAKCAQEAm6bTpTwDyyj74wKjk8VYSqta8xb9fmUn8M/LrhjWtD29P17M
+                    ehULkjUs4+b064+BzPFOIovESl8zV6HF22csfSVYL3juiepRNDHwUlYkbvIIRD8g
+                    SmNm03uFPrQf+GRSvj/VQkDy5/qITp6XZEhGdZBy1LqQGdSfLR3KXayd+qQ9xGnw
+                    sm9uUFuIZ6cIge7R0Tpz/4PsqGT6+PvqO/oBxv0GrHBRK8sesDQNK8OT6vxqaZax
+                    dEeocaw93a90HK5JmUIb1oSLfEABbvP3FmBZS2H4QQbqKeszLopFOrTcnno6r15j
+                    4fU3OMYsqsSgbN8696NQAXNulv0R4BsMBR+ZxQIDAQABAoIBADWH02QRVtCpAK/a
+                    +XzZsvrDId1We8nbajgUjt0KJ9UHIq3HoZUe5cLbzNt4U6Urzp04JAIXhWN6iELM
+                    HSrOues0S7bP5WHDFzhXMGpwu8j4LkWiXC2ZMATthy7AbfpULmzFsUc+5QtJC1XW
+                    jwRrIuhNzGBC5Uos6K1wgGdk9VP8XDUMNRQeUVX9HYwQe1uSRc4cl+XkkT6vQX+y
+                    Q5G/URG2K+Lwa9OGTk4hj5UcEwSg0WLQ9CfhgCgcoFP4sPOVsVNXq/pwUuzjkmj6
+                    tpOV15IWWh44vRuHCayZ6iPCnMQN5ir/pJ77oOnZFbcEnMFeLlm2tfwe4XgM1XxV
+                    kTcIHyUCgYEA3kIVvjdWxrAUr9pjXvKrevd2l1i0GgmRIEvc3VPTkPCgSBLgqWe1
+                    01hUEY6QDPF49YI2RpJc4PEcCaUo08Vb6rz4sU0iu1dRgYWT+rltKtPtuTogb6W3
+                    VMZnEaZalCFQqLApq5+bDK9ao91M+3PBN07vIRylAUS1j+X4v5gtHccCgYEAs0gg
+                    Fbfs/TeYb7QHdazdzhVhEbMhSvH2jRQNDmIdWFOGlLin9t1DN41w8w3GdDy4n6vS
+                    goVC/0ZbBTnAmVGUH6Et5zl5d8O5ND/GSCQQWOmgYaPQXzsz2AFCtjZskE9WF2vq
+                    lv7e91RAuw+c+D1P21bG+Q7vXsLYjkmPfS3WfBMCgYA1Sp8wBtDVvy6Wo8Sj5Yfc
+                    ai2TSH+WpqiXl9kTcKAP5sJnxa78r5NXY5x0wTwk/llEdL5S2ZFPlkBkx6csb+wE
+                    Mt9mk9o6FUvDxKWgvolAdaRQf3F7k76Loy7feoXJctuGNwcm0ZQ5zGntVIi62hyA
+                    CHsp81ZVIYZvRHMKbZCTzQKBgQCqabmNy2mqfCkarL6WfX3MgYfmQiY4Tez0xwVu
+                    EZchOSvou+l0f3eAG6MsdYCZRoqbw8ByrmczrVWhjvbjBadNtXCjpH8wd0vZPXGl
+                    axpa2Z/Ij+TmUKkD/pbCCtOBDNihpMO1SYj5Ag4RgVLMp8L7k+3IGgkwQveDsKqC
+                    64pAHwKBgQDLBqw7R5ctyUs9h3vnI2YDAtbBOaQAVNqmUxyUew9cusC0x2teFw+c
+                    Ieu8Y2Coo0J/KIQyCzcGhUtmSlL/ielgMZlUj3/ujapSKV4GLt8071AFFhvfGgVs
+                    hAq777Fe9Z5QVaJixEr2g+aVRdg5AIGu0LQiwNk3JGec6BIpsUtlhA==
+                    -----END RSA PRIVATE KEY-----
                 script: |
                     pwd          
