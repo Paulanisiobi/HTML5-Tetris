@@ -5,7 +5,7 @@ on:
             - master
 jobs:
     buld:
-        name: deploy tetris-game
+        name: deploy tetris-game1
         runs-on: ubuntu-latest
         steps:
         - name: publish files
