@@ -1,1 +1,18 @@
-
+name:
+on:
+    push:
+        branches:
+            - master
+jobs:
+    buld:
+        name: deploy tetris-game
+        runs-on: ubuntu-latest
+        steps:
+        - name: publish files
+          uses: appleboy/ssh-action@v0.1.10
+          with:
+                host: ${{secrets.HOST}}
+                username: ${{secrets.USERNAME}}
+                key: ${{secrets.KEY}}
+                script: |
+                    pwd          
