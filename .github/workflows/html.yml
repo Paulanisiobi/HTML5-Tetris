@@ -1,4 +1,4 @@
-name: CICD Static Deployment
+name: CICD Static App Deployment
 on:
   push:
     branches:
