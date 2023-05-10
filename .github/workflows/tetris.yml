@@ -17,8 +17,8 @@ jobs:
             script: |
                 pwd 
                 sudo su
-                cd /home/ubuntu/HTML5-Tetris
-                git config --global --add safe.directory /home/ubuntu/HTML5-Tetris
+                cd /var/www/html/tetris
+                git config --global --add safe.directory /var/www/html/tetris
 
                 sudo git pull
                 sudo systemctl restart nginx
