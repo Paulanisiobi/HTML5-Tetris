@@ -1,1 +1,24 @@
+name: Deploying Static App
+on:
+    push:
+        branches:
+            - master
+jobs:
+    build:
+        name: deploy tetris-game1
+        runs-on: ubuntu-latest
+        steps:
+        - name: publish files
+          uses: appleboy/ssh-action@v0.1.10
+          with:
+            host: ${{ secrets.SS_HOST  }}
+            username: ${{ secrets.SSH_USERNAME  }}
+            key: ${{ secrets.SSH_PRIVATE_KEY  }}
+            script: |
+                pwd 
+                sudo su
+                cd /home/ubuntu/HTML5-Tetris
+                git config --global --add safe.directory /home/ubuntu/HTML5-Tetris
 
+                sudo git pull
+                sudo systemctl restart nginx
