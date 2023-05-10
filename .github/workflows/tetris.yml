@@ -1,4 +1,4 @@
-name: Deploying Static App
+name: Deploying Static 
 on:
     push:
         branches:
